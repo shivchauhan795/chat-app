@@ -65,6 +65,7 @@ function Chat() {
                     placeholder="Message"
                     ref={inputRef}
                     endIcon={sendIcon()}
+                    width='w-full'
                     onClick={
                         () => {
                             if (!inputRef.current) return;
