@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+/* Custom scrollbar */
+@layer utilities {
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 7px; /* Thin scrollbar */
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1); /* Light background for visibility */
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(77, 76, 76, 0.5); /* scrollbar wheel */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(77, 76, 76, 0.764); /* Darker on hover */
+    }
+}
