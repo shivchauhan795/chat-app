@@ -2,12 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import { sendIcon } from "../icons/sendIcon.tsx";
 import { Input } from '../ui/Input.tsx';
 import { MessageBubble } from '../ui/MessageBubble.tsx';
+import { useParams } from 'react-router-dom';
 interface Data {
     message: string,
     senderName: string
 }
 
 function Chat() {
+    const roomCode = useParams().id;
+    const myName = useParams().name ?? "";
     const [messages, setMessages] = useState([""]);
     const [data, setdata] = useState<Data[]>([]);
     const wsRef = useRef<WebSocket>(null);
@@ -28,8 +31,8 @@ function Chat() {
             ws.send(JSON.stringify({
                 type: "join",
                 payload: {
-                    roomId: "red",
-                    name: "shiv"
+                    roomId: roomCode,
+                    name: myName
                 }
             }))
         }
@@ -49,10 +52,11 @@ function Chat() {
     return (
         <div className='flex flex-col justify-between w-full h-screen items-center bgimage text-white'>
             <div className={`h-5/6 pt-5 flex flex-col gap-5 overflow-auto w-full items-end custom-scrollbar`}>
+
                 {data
                     .map((message, index) =>
                         <>
-                            <MessageBubble key={index} message={message.message} senderName={message.senderName} />
+                            <MessageBubble key={index} message={message.message} senderName={message.senderName} myName={myName} />
                         </>
                     )
                 }
@@ -73,7 +77,7 @@ function Chat() {
                                 type: "chat",
                                 payload: {
                                     message: inputRef.current.value,
-                                    name: "Shiv"
+                                    name: myName
                                 }
                             }))
                             inputRef.current.value = "";

@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router'
 import CreateRoom from './pages/CreateRoom.tsx'
 import JoinRoom from './pages/JoinRoom.tsx'
 import Home from './pages/Home.tsx'
+import JoiningRoom from './pages/JoiningRoom.tsx'
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,12 @@ const router = createBrowserRouter([
     element: <JoinRoom />,
   },
   {
-    path: '/room/:id',
+    path: '/room/:id/:name',
     element: <App />,
+  },
+  {
+    path: '/joiningroom/:id',
+    element: <JoiningRoom />,
   },
 ])
 

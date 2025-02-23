@@ -51,7 +51,7 @@ const CreateRoom = () => {
                 }
                 {roomCode &&
                     <div className="flex justify-center">
-                        <button onClick={() => { navigate(`/room/${roomCode}`) }} className="text-xl flex gap-2 justify-center items-center border px-4 py-2 cursor-pointer rounded-2xl bg-[#733e0a]/50 mt-7"> Enter Room{sendIcon()}</button>
+                        <button onClick={() => { navigate(`/joiningroom/${roomCode}`) }} className="text-xl flex gap-2 justify-center items-center border px-4 py-2 cursor-pointer rounded-2xl bg-[#733e0a]/50 mt-7"> Enter Room{sendIcon()}</button>
                     </div>
                 }
             </div>
