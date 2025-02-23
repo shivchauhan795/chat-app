@@ -10,9 +10,9 @@ interface User {
 }
 let allSockets: User[] = [];
 
-wss.on("connection", (socket) => {
+wss.on("connection", (socket: WebSocket) => {
 
-    socket.on("message", (message) => {
+    socket.on("message", (message: string) => {
         const parsedMessage = JSON.parse(message as unknown as string);
         if (parsedMessage.type === "join") {
             allSockets.push({
