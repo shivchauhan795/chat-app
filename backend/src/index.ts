@@ -1,5 +1,6 @@
-import { WebSocketServer, WebSocket } from "ws";
-import { v4 as uuidv4 } from 'uuid';
+import WebSocket, { WebSocketServer } from "ws";
+import * as uuid from "uuid";
+const uuidv4 = uuid.v4;
 const wss = new WebSocketServer({ port: 8080 });
 
 interface User {
