@@ -28,7 +28,10 @@ const JoinRoom = () => {
                         endIcon={sendIcon()}
                         uppercase={true}
                         onClick={() => {
-                            if (roomCodeRef.current?.value) navigate(`/joiningroom/${roomCodeRef.current?.value}`);
+                            if (roomCodeRef.current?.value) {
+                                const uppercaseRoomCode = roomCodeRef.current?.value.toUpperCase();
+                                navigate(`/joiningroom/${uppercaseRoomCode}`);
+                            }
                             else toast.error("Please enter a room code", {
                                 style: {
                                     backgroundColor: "#ebc9a9"
