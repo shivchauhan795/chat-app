@@ -10,6 +10,7 @@ interface Data {
 
 function Chat() {
     const backendURL = import.meta.env.BACKEND_URL || "ws://localhost:8080";
+    console.log(backendURL);
     const roomCode = useParams().id;
     const myName = useParams().name ?? "";
     const [messages, setMessages] = useState([""]);
