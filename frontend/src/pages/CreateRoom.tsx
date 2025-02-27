@@ -22,7 +22,7 @@ const CreateRoom = () => {
                 position="top-center"
                 reverseOrder={false}
             />
-            <div className='sm:w-1/3 sm:h-fit pb-7 w-2/3 h-fit bg-white/50 shadow-xl rounded-4xl border'>
+            <div className='sm:w-fit px-9 sm:h-fit pb-7 w-2/3 h-fit bg-white/50 shadow-xl rounded-4xl border'>
                 <div className="text-4xl flex justify-center text-center uppercase font-semibold mt-7 font-mono">
                     Create Your Room
                 </div>
