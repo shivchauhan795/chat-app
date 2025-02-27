@@ -37,9 +37,6 @@ function Chat() {
                 }
             }))
         }
-        return () => {
-            ws.close();
-        }
     }, []);
 
 
