@@ -49,7 +49,7 @@ function Chat() {
 
     return (
         <div className='flex flex-col justify-between w-full h-screen items-center bgimage text-white'>
-            <div className={`h-5/6 pt-5 flex flex-col gap-5 overflow-auto w-full justify-end items-end custom-scrollbar`}>
+            <div className={`h-5/6 pt-16 flex flex-col gap-5 overflow-auto w-full justify-start items-end custom-scrollbar`}>
 
                 {data
                     .map((message, index) =>
