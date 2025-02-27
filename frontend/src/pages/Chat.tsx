@@ -9,7 +9,7 @@ interface Data {
 }
 
 function Chat() {
-    const backendURL = import.meta.env.BACKEND_URL || "ws://localhost:8080";
+    const backendURL = import.meta.env.VITE_BACKEND_URL || "ws://localhost:8080";
     console.log(backendURL);
     const roomCode = useParams().id;
     const myName = useParams().name ?? "";
