@@ -9,6 +9,7 @@ interface Data {
 }
 
 function Chat() {
+    const backendURL = import.meta.env.BACKEND_URL || "ws://localhost:8080";
     const roomCode = useParams().id;
     const myName = useParams().name ?? "";
     const [messages, setMessages] = useState([""]);
@@ -18,7 +19,7 @@ function Chat() {
     const messagesEndRef = useRef<HTMLDivElement>(null);  // keep the scroll at the bottom
 
     useEffect(() => {
-        const ws = new WebSocket('ws://localhost:8080');
+        const ws = new WebSocket(backendURL);
         ws.onmessage = (event) => {
             console.log(event);
             const eventData = JSON.parse(event.data);

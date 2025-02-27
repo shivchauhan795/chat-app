@@ -1,5 +1,7 @@
 import './App.css'
-import Chat from './pages/chat'
+import Chat from '<div className="" />
+<pages />
+<C></C>hat.tsx'
 
 function App() {
 
