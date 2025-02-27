@@ -1,5 +1,5 @@
-import { sendIcon } from "../icons/sendIcon"
-import { useNavigate } from "react-router-dom"
+import { sendIcon } from "../icons/sendIcon";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
     const navigate = useNavigate();
     return (

@@ -1,7 +1,5 @@
-import './App.css'
-import Chat from '<div className="" />
-<pages />
-<C></C>hat.tsx'
+import './App.css';
+import Chat from './pages/Chat.tsx';
 
 function App() {
 

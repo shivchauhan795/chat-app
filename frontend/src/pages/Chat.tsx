@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 import { sendIcon } from "../icons/sendIcon.tsx";
 import { Input } from '../ui/Input.tsx';
 import { MessageBubble } from '../ui/MessageBubble.tsx';
