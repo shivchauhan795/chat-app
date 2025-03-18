@@ -3,7 +3,7 @@ import { sendIcon } from "../icons/sendIcon.tsx";
 import { Input } from '../ui/Input.tsx';
 import { MessageBubble } from '../ui/MessageBubble.tsx';
 import { useParams } from 'react-router-dom';
-import EmojiPicker, { SkinTones } from 'emoji-picker-react';
+import EmojiPicker from 'emoji-picker-react';
 import { smileIcon } from '../icons/smileIcon.tsx';
 
 interface Data {
